@@ -1,0 +1,27 @@
+[
+  {
+    "skills": ["checking-idle-timeouts"],
+    "query": "We get a few random 502s a day from our ALB in front of this Go API. Nothing in our logs. Why?",
+    "expected_behavior": [
+      "Runs run.sh with the service's Go package and its Kubernetes manifests",
+      "Explains IG101 or IG102 if found, with the server's and the ALB's idle timeouts",
+      "Proposes an IdleTimeout above the ALB's idle timeout without editing code unasked"
+    ]
+  },
+  {
+    "skills": ["checking-idle-timeouts"],
+    "query": "What should IdleTimeout be for a Go server behind ingress-nginx?",
+    "expected_behavior": [
+      "Reads the ingress-nginx ConfigMap or uses the 60 second default the tool reports",
+      "Recommends a value above the upstream keepalive timeout"
+    ]
+  },
+  {
+    "skills": ["checking-idle-timeouts"],
+    "query": "idlegap exited 3 on our deploy folder. Are we fine?",
+    "expected_behavior": [
+      "Says exit 3 means there is no result, so it can't say the setup is fine",
+      "Reads the error and fixes the input, such as rendering Helm templates or passing --upstream-idle"
+    ]
+  }
+]

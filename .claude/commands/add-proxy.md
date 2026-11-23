@@ -1,0 +1,1 @@
+Add support for this proxy or load balancer: $ARGUMENTS. Read its documentation for the upstream (backend) idle or keepalive timeout and its default. Add the detection to `plugin/scripts/k8s.go`, tests for a set value, the default and a value it can't read, a row in the README's proxy table, and link the documentation in the pull request.

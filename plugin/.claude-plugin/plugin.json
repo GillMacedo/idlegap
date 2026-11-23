@@ -1,0 +1,13 @@
+{
+  "name": "idlegap",
+  "version": "0.1.0",
+  "description": "Find Go HTTP servers that close idle keep-alive connections before the load balancer or ingress in front of them does, which causes intermittent 502 errors. Reads Go source and Kubernetes manifests for AWS ALB, ingress-nginx and Google Cloud load balancers.",
+  "author": {
+    "name": "Giulliano Macedo",
+    "url": "https://github.com/GillMacedo"
+  },
+  "homepage": "https://github.com/GillMacedo/idlegap",
+  "repository": "https://github.com/GillMacedo/idlegap",
+  "license": "MIT",
+  "keywords": ["go", "golang", "kubernetes", "502", "keep-alive", "idle-timeout", "aws-alb", "ingress-nginx", "load-balancer"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "idlegap-marketplace",
+  "description": "Marketplace for idlegap, which finds Go servers that close idle connections before their load balancer does.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "idlegap",
+      "source": "./plugin",
+      "description": "Find Go HTTP servers whose idle timeout is shorter than the AWS ALB, ingress-nginx or Google Cloud load balancer in front of them, a cause of intermittent 502 errors."
+    }
+  ]
+}
